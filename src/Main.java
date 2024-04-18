@@ -1,3 +1,8 @@
+import firstEx.British;
+import firstEx.Frenchman;
+import firstEx.Person;
+import firstEx.Russian;
+
 public class Main {
     public static void main(String[] args)  {
         Person[] mock = new Person[3];

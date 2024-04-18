@@ -1,3 +1,5 @@
+package firstEx;
+
 public class Frenchman extends BasePerson{
     public Frenchman(String name) {
         super(name);
