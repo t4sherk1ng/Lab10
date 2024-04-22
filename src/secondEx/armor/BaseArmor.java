@@ -13,14 +13,27 @@ public abstract class BaseArmor implements Armor {
     }
 
     @Override
-    public abstract boolean isBroken();
+    public boolean isBroken() {
+        return this.durability == 0;
+    }
 
     @Override
-    public abstract int destroyBy(int characterID);
+    public int destroyBy(int damage) {
+        if (isBroken() || durability < damage) {
+            return 0;
+        } else {
+            this.durability -= damage;
+            return this.durability;
+        }
+    }
 
     @Override
     public abstract int getPosition();
 
     @Override
-    public abstract String toString();
+    public String toString() {
+        return this.getPosition() + ": " + this.getClass().getName() + ", " +
+                "durability: " + this.durability + ", " +
+                "isBroken: " + isBroken();
+    }
 }

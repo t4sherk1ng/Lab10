@@ -14,11 +14,22 @@ public abstract class BaseItem implements Item{
 
     @Override
     public int use() {
+        if (!isUsed()) {
+            this.count = 0;
+            return 1;
+        }
         return 0;
     }
 
     @Override
     public boolean isUsed() {
-        return false;
+        return this.count == 0;
+    }
+
+    @Override
+    public String toString() {
+        return this.getClass().getName() + ", " +
+                "count: " + this.count + ", " +
+                "isUsed: " + this.isUsed();
     }
 }

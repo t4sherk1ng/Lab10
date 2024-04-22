@@ -9,22 +9,7 @@ public class Dress extends BaseArmor{
     }
 
     @Override
-    public boolean isBroken() {
-        return false;
-    }
-
-    @Override
-    public int destroyBy(int characterID) {
-        return 0;
-    }
-
-    @Override
     public int getPosition() {
         return HELMET_POSITION;
-    }
-
-    @Override
-    public String toString() {
-        return null;
     }
 }

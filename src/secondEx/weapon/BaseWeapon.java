@@ -19,4 +19,10 @@ public abstract class BaseWeapon implements Weapon {
 
     @Override
     public abstract int getDistance();
+
+    public String toString() {
+        return this.getClass().getName() + ", " +
+                "power: " + this.getPower() + ", " +
+                "distance: " + this.getDistance();
+    }
 }
